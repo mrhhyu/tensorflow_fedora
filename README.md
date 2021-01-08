@@ -136,11 +136,11 @@ The process is very similar to the TensorFlow GPU support with few following dif
     ``` 
      ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tensorflow_pkg
     ```
-14. Install TensorFlow 2.5
+6. Install TensorFlow 2.5; **do not** intsall it in the same virtual environment as TensorFlow GPU.
     ``` 
      pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
     ```
-15. Save the following python code in test.py and execute it (`python test.py`)
+7. Save the following python code in test.py and execute it (`python test.py`)
     ``` 
     import tensorflow as tf
     from tensorflow.python.client import device_lib
@@ -150,22 +150,11 @@ The process is very similar to the TensorFlow GPU support with few following dif
     ``` 
     You must see "TF Version:2.5" and a long bash output containig something like follows:
     ```
-    Created TensorFlow device (/device:GPU:0 with 22434 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5)
     [name: "/device:CPU:0"
     device_type: "CPU"
     memory_limit: 268435456
     locality {
     }
     incarnation: 17126562804018110364
-    , name: "/device:GPU:0"
-    device_type: "GPU"
-    memory_limit: 23523885056
-    locality {
-      bus_id: 1
-      links {
-      }
-    }
-    incarnation: 17839688261725336163
-    physical_device_desc: "device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5"
     ]
     ```
