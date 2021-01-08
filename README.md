@@ -1,4 +1,4 @@
-# Build and Install TensorFlow 2.5 on Fedora 33 (Kernel Version 5.9.16)
+# Install TensorFlow on Fedora 33
 
 TensorFlow is a well-known machine learning framework in industry as well as academia that supports both CPU and GPU based computations. 
 
@@ -29,7 +29,7 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
     ```         
     cd ‘your_dir’
     python3 -m venv ‘your_venv_name’
-    source venv/bin/activate
+    source ‘your_venv_name’/bin/activate
     ```
   Now, your bash looks like this:  `(your_venv_name) [root@XX XX]$`
            
