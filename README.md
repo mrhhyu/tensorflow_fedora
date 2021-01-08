@@ -25,7 +25,7 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
            
 4. Install python 3.8 (`sudo dnf install python38`)
        
-5. Make a **virtual environment** to build and install TensorFlow and active it
+5. Make a **virtual environment** to build and install TensorFlow and active it (Note that you can just use python instead of python3 if your system recognizes python as the default Python3.8 interpreter)
     ```         
     cd ‘your_dir’
     python3 -m venv ‘your_venv_name’
