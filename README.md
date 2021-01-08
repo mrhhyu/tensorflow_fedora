@@ -75,7 +75,36 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
     ``` 
      pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
     ```
-    
+15. Save the following python code in test.py and execute it (`python test.py`)
+    ``` 
+    import tensorflow as tf
+    from tensorflow.python.client import device_lib
+    print("TF Version: "+tf.__version__)
+    print()
+    print(device_lib.list_local_devices())
+    ``` 
+    You must see "TF Version:2.5" and a long bash output containig something like follows:
+    ```
+    Created TensorFlow device (/device:GPU:0 with 22434 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5)
+    [name: "/device:CPU:0"
+    device_type: "CPU"
+    memory_limit: 268435456
+    locality {
+    }
+    incarnation: 17126562804018110364
+    , name: "/device:GPU:0"
+    device_type: "GPU"
+    memory_limit: 23523885056
+    locality {
+      bus_id: 1
+      links {
+      }
+    }
+    incarnation: 17839688261725336163
+    physical_device_desc: "device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5"
+    ]
+    ```
+
  Enjoy !!
 
 
