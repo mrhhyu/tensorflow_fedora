@@ -62,6 +62,8 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
       Note: Do you wish to build TensorFlow with CUDA support? [y/N]: y
       
       Note: Do you want to use clang as CUDA compiler? [y/N]: n
+      
+      Note: Please specify optimization flags to use during compilation when bazel option "--config=opt" is specified [Default is -Wno-sign-compare]:-march=native
             
 12. Start the build process  (it takes few hours to be completed) {--config=v2 to build tensorflow 2.x}
     ``` 
