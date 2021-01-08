@@ -1,4 +1,4 @@
-# Install TensorFlow on Fedora 33
+# Install TensorFlow-GPU on Fedora 33
 
 TensorFlow is a well-known machine learning framework in industry as well as academia that supports both CPU and GPU based computations. 
 
