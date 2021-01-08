@@ -59,9 +59,11 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
 
       Note: do not change the default location of Python
       
-      Note: Do you wish to build TensorFlow with CUDA support? [y/N]: Y
+      Note: Do you wish to build TensorFlow with CUDA support? [y/N]: y
+      
+      Note: Do you want to use clang as CUDA compiler? [y/N]: n
             
-12. Start the build process  (it takes few hours to be completed)
+12. Start the build process  (it takes few hours to be completed) {--config=v2 to build tensorflow 2.x}
     ``` 
      bazel build --config=cuda --config=v2 --config=mkl --config=monolithic //tensorflow/tools/pip_package:build_pip_package
     ```
