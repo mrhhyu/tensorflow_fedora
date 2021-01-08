@@ -21,7 +21,7 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
    make clean && make
    ./mnistCUDNN
    ```
-   If cuDNN is properly installed and running on your Linux system, you will see a message similar to the following: **Test passed!**
+   If cuDNN is properly installed and running on your Linux system, you will see a long message with **Test passed!** at the end.
            
 4. Install python 3.8 (`sudo dnf install python38`)
        
