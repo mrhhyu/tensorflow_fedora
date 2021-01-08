@@ -4,11 +4,11 @@ TensorFlow is a well-known machine learning framework in industry as well as aca
 
 In the case of only CPU support, all is straightforward; you can easily install TensorFlow by using pip, anaconda, and docker; however, when it comes to GPU support, the story is a bit complicated. 
 
-In the TensorFlow official site, using docker image is suggested as the best way to employ TensorFlow GPU. However, I believe that building it from source is the best choice since the docker image could be failed due to some minor versions unmatched in any possible packages.  
+In the TensorFlow official website, using docker image is suggested as the best way to employ TensorFlow GPU. However, I believe that building it from source is the best choice since the docker image could be failed due to some minor versions unmatched in any possible packages.  
 
-I have struggled for one week to install TensorFlow GPU on Fedora 33; I have tried different possible ways including different versions of nvidia drivers, CUDA, docker images, and even [nvidia TensorFlow images](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/overview.html#overview).
+I have struggled for one week to install TensorFlow GPU on Fedora 33; I have tried different possible methods including various versions of nvidia drivers, CUDA installers, docker images, and even [nvidia TensorFlow images](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/overview.html#overview).
 
-Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel 5.9.16** as follows, it works as a clock. Hope, this guide could be helpful for you as well. I have collected this  information from different sources (*“TensorFlow Install Source” page in the TensorFlow official website could be a nice source*). Note that you need *root privilege* only for steps 1 to 8.
+Finally, I could successfully build and install **TensorFlow 2.5** on **Fedora 33** with **kernel 5.9.16** as follows. Hope, this post could be helpful for you as well. Note that you need *root privilege* only for steps 1 to 8.
 
 1. Install compatible **nvidia driver supported CUDA 11.1** by following [here](https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/)
        
@@ -110,6 +110,62 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
  Enjoy !!
 
 
+## Install TensorFlow-CPU on Fedora 33
 
-    
+The process is very similar to the TensorFlow GPU support with few following differences:
 
+1. Steps 1, 2, and 3 are unnecessary, of course. 
+
+2. Follow steps 4~10.
+
+3. Configure the build process by answering some questions through executing `python configure.py`:
+
+      Note: do not change the default location of Python
+      
+      Note: Do you wish to build TensorFlow with CUDA support? [y/N]: n
+      
+      Note: Do you want to use clang as CUDA compiler? [y/N]: n
+      
+      Note: Please specify optimization flags to use during compilation when bazel option "--config=opt" is specified [Default is -Wno-sign-compare]:-march=native
+  
+4. Start the build process  (it takes few hours to be completed) {--config=v2 to build tensorflow 2.x}
+    ``` 
+     bazel build --config=v2 --config=mkl --config=monolithic //tensorflow/tools/pip_package:build_pip_package
+    ```
+5. Make the **whl** file, which will be used to install TensorFlow 2.5
+    ``` 
+     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tensorflow_pkg
+    ```
+14. Install TensorFlow 2.5
+    ``` 
+     pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
+    ```
+15. Save the following python code in test.py and execute it (`python test.py`)
+    ``` 
+    import tensorflow as tf
+    from tensorflow.python.client import device_lib
+    print("TF Version: "+tf.__version__)
+    print()
+    print(device_lib.list_local_devices())
+    ``` 
+    You must see "TF Version:2.5" and a long bash output containig something like follows:
+    ```
+    Created TensorFlow device (/device:GPU:0 with 22434 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5)
+    [name: "/device:CPU:0"
+    device_type: "CPU"
+    memory_limit: 268435456
+    locality {
+    }
+    incarnation: 17126562804018110364
+    , name: "/device:GPU:0"
+    device_type: "GPU"
+    memory_limit: 23523885056
+    locality {
+      bus_id: 1
+      links {
+      }
+    }
+    incarnation: 17839688261725336163
+    physical_device_desc: "device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5"
+    ]
+    ```
