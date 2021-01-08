@@ -69,11 +69,11 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
     ```
 13. Make the **whl** file, which will be used to install TensorFlow 2.5
     ``` 
-     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tmp/tensorflow_pkg
+     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tensorflow_pkg
     ```
 14. Install TensorFlow 2.5
     ``` 
-     pip install /tmp/tensorflow_pkg/tensorflow-2.5.0-*.whl
+     pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
     ```
     
  Enjoy !!
