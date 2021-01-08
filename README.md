@@ -40,7 +40,7 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
 8. Install required prepackes
     ```
      pip install -U pip numpy wheel
-     pip install -U keras_preprocessing –no-deps
+     pip install -U keras_preprocessing --no-deps
      ```
      
 9. Download *executable version of bazel-3.7.2* for Linux from [here](https://github.com/bazelbuild/bazel/releases/download/3.7.2/bazel-3.7.2-linux-x86_64), rename it to *bazel* and add it to **PATH** (export `PATH=$PATH:’your_dir’/bazel`)
