@@ -14,7 +14,7 @@ Finally, I built and installed **TensorFlow 2.5** on **Fedora 33** with **kernel
        
 2. Install **CUDA version 11.1** by following [here](https://www.if-not-true-then-false.com/2018/install-nvidia-cuda-toolkit-on-fedora/)
        
-3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -inv libcudnn8*rpm` command. Then, verify the installation as follows:
+3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -inv libcudnn8*.rpm` command. Then, verify the installation as follows:
    ```       
    cp -r /usr/src/cudnn_samples_v8/ $HOME
    cd  $HOME/cudnn_samples_v8/mnistCUDNN
