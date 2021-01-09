@@ -196,6 +196,8 @@ Save the following python code in check.py and execute it (`python check.py`)
     time_passed = stop-start
     print ()
     print("time with GPU: "+str(round((time_passed/60),3)))
-``` 
-    In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU:" and time with GPU:". 
+```
+In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU:" minutes and "time with GPU: minutes". 
+
+ENJOY!
 
