@@ -181,8 +181,8 @@ Save the following python code in check.py and execute it (`python check.py`)
         print (tf.reduce_sum(tf.random.normal([i, j])))
     stop = time.perf_counter()
     time_passed = stop-start
-    print ()
     print("time with CPU: "+str(round((time_passed/60),3)))
+    print ()
     
     start = time.perf_counter()
     with tf.device('/GPU:0'):
@@ -194,10 +194,9 @@ Save the following python code in check.py and execute it (`python check.py`)
         print (tf.reduce_sum(tf.random.normal([i, j])))   
     stop = time.perf_counter()
     time_passed = stop-start
-    print ()
     print("time with GPU: "+str(round((time_passed/60),3)))
 ```
-In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU:" minutes and "time with GPU: minutes". 
+In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU: 25.827 mins" and "time with GPU: 2.054 mins". 
 
 ENJOY!
 
