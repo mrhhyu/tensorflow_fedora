@@ -167,7 +167,8 @@ The process is very similar to the TensorFlow GPU support with few following dif
 ## Simple chek 
 
 Save the following python code in check.py and execute it (`python check.py`)
-    ``` 
+
+    ```
     import tensorflow as tf
     import time
     
