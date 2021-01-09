@@ -116,9 +116,6 @@ You need *root privilege* only for steps 1 to 8.
     ]
     ```
 
- Enjoy !!
-
-
 ## Install TensorFlow-CPU on Fedora 33
 
 The process is very similar to the TensorFlow GPU support with few following differences:
@@ -167,3 +164,38 @@ The process is very similar to the TensorFlow GPU support with few following dif
     incarnation: 17126562804018110364
     ]
     ```
+## Simple chek 
+
+Save the following python code in check.py and execute it (`python check.py`)
+    ``` 
+    import tensorflow as tf
+    import time
+    
+    start = time.perf_counter()
+    with tf.device('/CPU:0'):
+        for i in range (1,1000):
+            if i%100==0:
+                print (i)        
+            for j  in range (1,1000):
+                tf.reduce_sum(tf.random.normal([1000, 1000]))
+        print (tf.reduce_sum(tf.random.normal([i, j])))
+    stop = time.perf_counter()
+    time_passed = stop-start
+    print ()
+    print("time with CPU: "+str(round((time_passed/60),3)))
+    
+    start = time.perf_counter()
+    with tf.device('/GPU:0'):
+        for i in range (1,1000):
+            if i%100==0:
+                print (i)        
+            for j  in range (1,1000):
+                tf.reduce_sum(tf.random.normal([1000, 1000]))
+        print (tf.reduce_sum(tf.random.normal([i, j])))   
+    stop = time.perf_counter()
+    time_passed = stop-start
+    print ()
+    print("time with GPU: "+str(round((time_passed/60),3)))
+    ``` 
+    In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU:" and time with GPU:". 
+
