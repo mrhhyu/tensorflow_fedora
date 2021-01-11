@@ -178,7 +178,6 @@ Save the following python code in check.py and execute it (`python check.py`)
                 print (i)        
             for j  in range (1,1000):
                 tf.reduce_sum(tf.random.normal([1000, 1000]))
-        print (tf.reduce_sum(tf.random.normal([i, j])))
     stop = time.perf_counter()
     time_passed = stop-start
     print("time with CPU: "+str(round((time_passed/60),3)))
@@ -191,7 +190,6 @@ Save the following python code in check.py and execute it (`python check.py`)
                 print (i)        
             for j  in range (1,1000):
                 tf.reduce_sum(tf.random.normal([1000, 1000]))
-        print (tf.reduce_sum(tf.random.normal([i, j])))   
     stop = time.perf_counter()
     time_passed = stop-start
     print("time with GPU: "+str(round((time_passed/60),3)))
