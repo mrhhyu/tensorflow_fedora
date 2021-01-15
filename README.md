@@ -1,6 +1,6 @@
 # Install TensorFlow on Fedora 33
 
-TensorFlow is a well-known machine learning framework in industry as well as academia that supports both CPU and GPU based computations. 
+TensorFlow is a well-known and open source machine learning framework in industry as well as academia that supports both CPU and GPU based computations. 
 
 In the case of only CPU support, all is straightforward; you can easily install TensorFlow by using pip, anaconda, and docker; however, when it comes to GPU support, the story is a bit complicated. 
 
