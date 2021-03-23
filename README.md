@@ -164,7 +164,8 @@ The process is very similar to the TensorFlow GPU support with few following dif
     incarnation: 17126562804018110364
     ]
     ```
-## Simple chek 
+    
+## Simple check 
 
 Save the following python code in check.py and execute it (`python check.py`)
 ```
@@ -195,6 +196,19 @@ Save the following python code in check.py and execute it (`python check.py`)
     print("time with GPU: "+str(round((time_passed/60),3)))
 ```
 In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, "time with CPU: 25.827" and "time with GPU: 2.054". 
+
+## When Kernel update affects the driver 
+
+During installation process of a new kernel, DKMS is uninstalled; then, it is built and installed again. However, when the installed nvidia driver is **not compatible** with the new kernel, DKMS is uninstalled and will not be installed again; you cannot login via new installed kernel. 
+In this case, 
+1. Login via an already installed old kernel
+2. Uninstall the new kernel
+3. Install the nvidia driver compatible with the new kernel
+4. Install the new kernel again
+
+Now, TensorFlow-gpu is usable and no extra setting is required.  
+
+
 
 ENJOY!
 
