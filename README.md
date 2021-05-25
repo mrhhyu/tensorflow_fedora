@@ -203,7 +203,7 @@ During installation process of a new kernel, DKMS is uninstalled; then, it is bu
 In this case, 
 1. Login via an already installed old kernel
 2. Uninstall the new kernel
-3. Install the nvidia driver compatible with the new kernel
+3. Install the nvidia driver compatible with your existing CUBA and the new kernel
 4. Install the new kernel again
 
 Now, TensorFlow-gpu is usable and no extra setting is required.  
