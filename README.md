@@ -13,7 +13,7 @@ Finally, I could successfully build and install **TensorFlow 2.5** (i.e., both G
 ### Important notes to install TensorFlow-GPU: ###
 
 1. The most important steps are 1, 2, and 3; after each step, follow the instructions to assure that packages are installed in a proper way.
-2. **Make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
+2. The following steps can be applied when the versions of your kernel, cuda, and driver are different with the ones used here; however, **make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
 
 ## Install TensorFlow-GPU on Fedora 33
 
@@ -23,7 +23,7 @@ You need *root privilege* only for steps 1 to 8.
        
 2. Install **CUDA Toolkit version 11.1** by following [here](https://www.if-not-true-then-false.com/2018/install-nvidia-cuda-toolkit-on-fedora/)
        
-3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -inv libcudnn8*.rpm` command. Then, verify the installation as follows:
+3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -inv libcudnn8*.rpm` command. Then, verify the installation as follows (note that "freeimage" and "freeimage-dev" pachakges must be installed to make the cuDNN samples):
    ```       
    cp -r /usr/src/cudnn_samples_v8/ $HOME
    cd  $HOME/cudnn_samples_v8/mnistCUDNN
