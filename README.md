@@ -13,7 +13,7 @@ Finally, I could successfully build and install **TensorFlow 2.5** (i.e., both G
 ### Important notes to install TensorFlow-GPU: ###
 
 1. The most important steps are 1, 2, and 3; after each step, follow the instructions to assure that packages are installed in a proper way.
-2. The following steps can be applied when the versions of your kernel, cuda, and driver are different with the ones used here; however, **make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
+2. ***The following steps can be applied when the versions of your kernel, cuda, and driver are different with the ones used here***; however, **make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
 
 ## Install TensorFlow-GPU on Fedora 33
 
