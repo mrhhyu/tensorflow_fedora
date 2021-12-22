@@ -23,7 +23,7 @@ You need *root privilege* only for steps 1 to 8.
        
 2. Install **CUDA Toolkit version 11.1** by following [here](https://www.if-not-true-then-false.com/2018/install-nvidia-cuda-toolkit-on-fedora/)
        
-3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -inv libcudnn8*.rpm` command. Then, verify the installation as follows (note that "freeimage" and "freeimage-dev" pachakges must be installed to make the cuDNN samples):
+3. Download **cuDDN version 8.0.05** (*libcudnn8, libcudnn8-devel, libcudnn8-samples*) that is compatible with CUDA-11.1 from [here](https://developer.nvidia.com/rdp/cudnn-download) (*you need to make a free account*) and install them by `rpm -Uvh libcudnn8*.rpm` command. Then, verify the installation as follows (note that "freeimage" and "freeimage-dev" pachakges must be installed to make the cuDNN samples):
    ```       
    cp -r /usr/src/cudnn_samples_v8/ $HOME
    cd  $HOME/cudnn_samples_v8/mnistCUDNN
@@ -34,7 +34,7 @@ You need *root privilege* only for steps 1 to 8.
            
 4. Install python 3.8 (`sudo dnf install python38`)
        
-5. Make a **virtual environment** to build and install TensorFlow and active it (Note that you can just use python instead of python3 if your system recognizes python as the default Python3.8 interpreter)
+5. Make a **virtual environment** to build and install TensorFlow and active it (Note that you can just use python instead of python3 if your system recognizes python as the default Python3.8 interpreter; you can also make the virtual environment under user not root)
     ```         
     cd ‘your_desire_dir’
     python3 -m venv ‘your_venv_name’
@@ -67,6 +67,8 @@ You need *root privilege* only for steps 1 to 8.
 11. Configure the build process by answering some questions through executing `python configure.py`:
 
       Note: do not change the default location of Python
+      
+      Note: Do you wish to build TensorFlow with ROCm support? [y/N]: n
       
       Note: Do you wish to build TensorFlow with CUDA support? [y/N]: y
       
