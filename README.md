@@ -81,7 +81,7 @@ You need *root privilege* only for steps 1 to 8.
             
 12. Start the build process  (it takes few hours to be completed) {--config=v2 to build tensorflow 2.x}
     ``` 
-     bazel build --config=cuda --config=v2 --config=mkl --config=monolithic //tensorflow/tools/pip_package:build_pip_package
+     bazel build --config=cuda --config=v2 --config=opt --config=nonccl //tensorflow/tools/pip_package:build_pip_package --verbose_failure
     ```
 13. Make the **whl** file, which will be used to install TensorFlow 2.5
     ``` 
