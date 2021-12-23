@@ -19,7 +19,7 @@ Finally, I could successfully built and install **TensorFlow 2.5** (i.e., both G
 
 ## Install TensorFlow-GPU on Fedora 33
 
-You need *root privilege* only for steps 1 to 8.
+You need *root privilege* only for steps 1 to 7.
 
 1. Install compatible **nvidia driver supported CUDA 11.1** by following [here](https://www.if-not-true-then-false.com/2015/fedora-nvidia-guide/)
        
