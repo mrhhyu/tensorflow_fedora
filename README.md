@@ -88,7 +88,7 @@ You need *root privilege* only for steps 1 to 7.
     ```
 14. Install TensorFlow 2.5
     ``` 
-     pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
+     pip install 'your_desire_dir'/tensorflow-2.5.0-*.whl
     ```
 15. Save the following python code in test.py and execute it (`python test.py`)
     ``` 
@@ -148,7 +148,7 @@ The process is very similar to the TensorFlow GPU support with few following dif
     ```
 6. Install TensorFlow 2.5; **do not** intsall it in the same virtual environment as TensorFlow GPU.
     ``` 
-     pip install 'your_desire_dir'/tensorflow_pkg/tensorflow-2.5.0-*.whl
+     pip install 'your_desire_dir'/tensorflow-2.5.0-*.whl
     ```
 7. Save the following python code in test.py and execute it (`python test.py`)
     ``` 
