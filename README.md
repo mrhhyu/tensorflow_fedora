@@ -9,6 +9,7 @@ In the TensorFlow official website, using docker image is suggested as the best 
 I have struggled for a week to install TensorFlow GPU on Fedora 33; I have tried different possible methods including various versions of nvidia drivers, CUDA installers, docker images, and even [nvidia TensorFlow images](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/overview.html#overview).
 
 Finally, I could successfully build and install **TensorFlow 2.5** (i.e., both GPU and CPU) on **Fedora 33** with **kernel 5.9.16** as follows. Hope, this post could be helpful for you as well. 
+**Instructions on TensorFlow 2.7 (TensorRT support) and Fedora 35 is located under Release 1.**
 
 ### Important notes to install TensorFlow-GPU: ###
 
