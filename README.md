@@ -140,7 +140,7 @@ The process is very similar to the TensorFlow GPU support with few following dif
   
 4. Start the build process  (it takes few hours to be completed) {--config=v2 to build tensorflow 2.x}
     ``` 
-     bazel build --config=v2 --config=mkl --config=monolithic //tensorflow/tools/pip_package:build_pip_package
+     bazel build --config=v2 --config=nonccl //tensorflow/tools/pip_package:build_pip_package --verbose_failures
     ```
 5. Make the **whl** file, which will be used to install TensorFlow 2.5
     ``` 
