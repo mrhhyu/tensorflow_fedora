@@ -84,7 +84,7 @@ You need *root privilege* only for steps 1 to 7.
     ```
 13. Make the **whl** file, which will be used to install TensorFlow 2.5
     ``` 
-     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tensorflow_pkg
+     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'
     ```
 14. Install TensorFlow 2.5
     ``` 
@@ -144,7 +144,7 @@ The process is very similar to the TensorFlow GPU support with few following dif
     ```
 5. Make the **whl** file, which will be used to install TensorFlow 2.5
     ``` 
-     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'/tensorflow_pkg
+     ./bazel-bin/tensorflow/tools/pip_package/build_pip_package 'your_desire_dir'
     ```
 6. Install TensorFlow 2.5; **do not** intsall it in the same virtual environment as TensorFlow GPU.
     ``` 
