@@ -4,7 +4,7 @@ TensorFlow is a well-known and open source machine learning framework in industr
 
 In the case of only CPU support, all is straightforward; you can easily install TensorFlow by using pip, anaconda, and docker; however, when it comes to GPU support, the story is a bit complicated. 
 
-In the TensorFlow official website, using docker image is suggested as the best way to employ TensorFlow GPU. However, I believe that building it from source is the best choice since the docker image could be failed due to some minor versions unmatched in any possible packages.  
+In the TensorFlow official website, using docker image is suggested as the best way to employ TensorFlow GPU. However, I believe that building it from source is the best choice since the docker image could be failed due to minor versions unmatched in any possible packages.  
 
 I have struggled fo
 r a week to install TensorFlow GPU on Fedora 33; I have tried different possible methods including various versions of nvidia drivers, CUDA installers, docker images, and even [nvidia TensorFlow images](https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/overview.html#overview).
