@@ -10,7 +10,7 @@ I have struggled for a week to install TensorFlow GPU on Fedora 33; I have tried
 
 Finally, I could successfully built and install **TensorFlow 2.5** (i.e., both GPU and CPU) on **Fedora 33** with **kernel 5.9.16** as follows. Hope, this post could be helpful for you as well. 
 
-**Instructions on TensorFlow 2.9 (TensorRT support) and Fedora 35 is explained in [Release 1 of this post] (https://github.com/mrhhyu/tensorflow_fedora/releases).**
+**Instructions on TensorFlow 2.9 (TensorRT support) and Fedora 35 is explained in [Release 1 of this post](https://github.com/mrhhyu/tensorflow_fedora/releases).**
 
 ### Important notes to install TensorFlow-GPU: ###
 
