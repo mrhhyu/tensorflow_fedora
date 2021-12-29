@@ -34,7 +34,7 @@ You need *root privilege* only for steps 1 to 7.
    ```
    If cuDNN is properly installed and running on your Linux system, you will see a long message with **Test passed!** at the end.
            
-4. Install python 3.8 (`sudo dnf install python38`)
+4. Install python 3.8 (`sudo dnf install python38`) and the corresponding python-devel package.
        
 5. Make a **virtual environment** to build and install TensorFlow and active it (Note that you can just use python instead of python3 if your system recognizes python as the default Python3.8 interpreter; you can also make the virtual environment under user not root)
     ```         
