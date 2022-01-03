@@ -98,7 +98,7 @@ You need *root privilege* only for steps 1 to 7.
     print()
     print(device_lib.list_local_devices())
     ``` 
-    You must see "TF Version:2.5" and a long bash output containig something like follows:
+    You must see "TF Version: 2.5" and a long bash output containig something like follows:
     ```
     Created TensorFlow device (/device:GPU:0 with 22434 MB memory) -> physical GPU (device: 0, name: TITAN RTX, pci bus id: 0000:01:00.0, compute capability: 7.5)
     [name: "/device:CPU:0"
@@ -158,7 +158,7 @@ The process is very similar to the TensorFlow GPU support with few following dif
     print()
     print(device_lib.list_local_devices())
     ``` 
-    You must see "TF Version:2.5" and a long bash output containig something like follows:
+    You must see "TF Version: 2.5" and a long bash output containig something like follows:
     ```
     [name: "/device:CPU:0"
     device_type: "CPU"
