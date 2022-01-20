@@ -1,4 +1,4 @@
-# Install TensorFlow on Fedora
+# Build TensorFlow on Fedora
 
 TensorFlow is a well-known and open source machine learning framework in industry as well as academia that supports both CPU and GPU based computations. 
 
@@ -17,7 +17,7 @@ Finally, I could successfully built and install **TensorFlow 2.5** (i.e., both G
 1. The most important steps are 1, 2, and 3; after each step, follow the instructions to assure that packages are installed in a proper way.
 2. ***The following steps can be applied when the versions of your kernel, cuda, and the nvidia driver are different with the ones used here***; however, **make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
 
-## Install TensorFlow-GPU on Fedora 33
+## Build and Install TensorFlow-GPU on Fedora 33
 
 You need *root privilege* only for steps 1 to 7.
 
