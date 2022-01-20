@@ -12,7 +12,7 @@ Finally, I could successfully built and install **TensorFlow 2.5** (i.e., both G
 
 **Instructions on TensorFlow 2.9 (TensorRT support) and Fedora 35 is explained in [Release 1 of this post](https://github.com/mrhhyu/tensorflow_fedora/releases).**
 
-### Important notes to install TensorFlow-GPU: ###
+### Important notes to build TensorFlow-GPU: ###
 
 1. The most important steps are 1, 2, and 3; after each step, follow the instructions to assure that packages are installed in a proper way.
 2. ***The following steps can be applied when the versions of your kernel, cuda, and the nvidia driver are different with the ones used here***; however, **make sure** that both the *nvidia driver* and *cuDDN package* support the **actuall version of your CUDA package**.
