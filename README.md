@@ -206,7 +206,7 @@ In my machine with Intel i9-9900K CPU (3.60GHz), 128 GB RAM, and TITAN RTX GPU, 
 During installation process of a new kernel, DKMS is uninstalled; then, it is built and installed again. However, when the installed nvidia driver is **not compatible** with the new kernel, DKMS is uninstalled and will not be installed again; you cannot login via new installed kernel. 
 In this case, 
 1. Login via an already installed old kernel
-2. Downlaod the nvidia driver compatible with your existing CUDA and the new kernel; make in exectable
+2. Download the nvidia driver compatible with your existing CUDA and the new kernel; make in exectable
 3. Uninstall current nvidia driver by "nvidia-installer --uninstall"
 4. reboot and login in run-level 3 (text-mode with network) via new kernel
 5. Install the new downlowded nvidia driver
