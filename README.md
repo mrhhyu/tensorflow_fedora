@@ -208,7 +208,7 @@ In this case,
 1. Login via an already installed old kernel
 2. Download the nvidia driver compatible with your existing CUDA and the new kernel; make in exectable
 3. Uninstall current nvidia driver by "nvidia-installer --uninstall"
-4. reboot and login in run-level 3 (text-mode with network) via new kernel
+4. reboot and login in run-level 3 (text-mode with network by adding 'init 3' to the end of the boot command of GRUB) via new kernel
 5. Install the new downlowded nvidia driver
 
 Now, TensorFlow-gpu is usable and no extra setting is required.  
